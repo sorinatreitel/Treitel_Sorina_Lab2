@@ -20,6 +20,8 @@ namespace Treitel_Sorina_Lab2.Data
 
         public DbSet<Treitel_Sorina_Lab2.Models.Author> Author { get; set; }
 
+        public DbSet<Treitel_Sorina_Lab2.Models.Category> Category { get; set; }
+
        
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Treitel_Sorina_Lab2.Data;
 
@@ -11,9 +12,10 @@ using Treitel_Sorina_Lab2.Data;
 namespace Treitel_Sorina_Lab2.Migrations
 {
     [DbContext(typeof(Treitel_Sorina_Lab2Context))]
-    partial class Treitel_Sorina_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20221026121327_BookCategory")]
+    partial class BookCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
