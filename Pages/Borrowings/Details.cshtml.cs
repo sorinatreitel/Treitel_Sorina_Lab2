@@ -29,6 +29,7 @@ namespace Treitel_Sorina_Lab2.Pages.Borrowings
             }
 
             var borrowing = await _context.Borrowing.FirstOrDefaultAsync(m => m.ID == id);
+
             if (borrowing == null)
             {
                 return NotFound();
@@ -36,6 +37,8 @@ namespace Treitel_Sorina_Lab2.Pages.Borrowings
             else 
             {
                 Borrowing = borrowing;
+                var book=await _context.Book.FirstOrDefaultAsync(m =>m.ID == borrowing.BookID);
+                var member= await _context.Member.FirstOrDefaultAsync(m =>m.ID == borrowing.MemberID);
             }
             return Page();
         }
